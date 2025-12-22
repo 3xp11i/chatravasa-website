@@ -240,10 +240,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.hero-section {
-  /* background: linear-gradient(135deg, #FFEE91 0%, #FFF9D0 100%); */
-}
-
 .card {
   background: var(--color-surface);
   border-radius: 1rem;

@@ -9,6 +9,8 @@
              class="w-12 h-12 object-contain" />
         <!-- Spacer when sidebar button is hidden to maintain layout -->
 
+
+        <NuxtLink to="https://app.chatravasa.com" class="greenBtn">Go to App</NuxtLink>
     </nav>
 
 
