@@ -8,11 +8,13 @@
       <div class="space-y-4 text-left">
         <div>
           <h3 class="font-semibold text-text mb-1">Email</h3>
-          <p class="text-text-muted">support@chatravasa.com</p>
+          <p class="text-text-muted">team@chatravasa.com</p>
         </div>
         <div>
           <h3 class="font-semibold text-text mb-1">Phone</h3>
-          <p class="text-text-muted">+91 XXX XXX XXXX</p>
+          <a href="tel:+918127837764" class="text-text-muted hover:text-primary transition-colors">
+            +91 812 783 7764
+          </a>
         </div>
       </div>
       <NuxtLink 
