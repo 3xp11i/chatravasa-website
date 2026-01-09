@@ -217,6 +217,12 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink 
+            to="/pricing"
+            class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-md transition-all"
+          >
+            View Pricing
+          </NuxtLink>
+          <NuxtLink 
             to="/contact"
             class="px-8 py-3 bg-white hover:bg-gray-50 text-text border-2 border-gray-300 font-semibold rounded-lg shadow-sm transition-all"
           >
