@@ -72,7 +72,7 @@
                 <div class="flex-1">
                   <div class="font-semibold text-text">Fees Management</div>
                   <div class="text-sm text-text-muted">
-                    Track payments, generate invoices, manage financial records
+                    Track payments, manage financial records
                   </div>
                   <div class="text-sm font-semibold text-primary mt-1">
                     ₹10/resident/month
