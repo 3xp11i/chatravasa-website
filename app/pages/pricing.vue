@@ -22,21 +22,21 @@
           <div class="card">
             <h2 class="text-2xl font-bold text-text mb-6">Configure Your Plan</h2>
             
-            <!-- Number of Residents -->
+            <!-- Hostel Size Category -->
             <div class="mb-6">
               <label class="block text-text font-semibold mb-2">
-                Number of Residents
+                Hostel Size
               </label>
-              <input 
-                v-model.number="residentCount"
-                type="number"
-                min="1"
-                max="500"
+              <select
+                v-model="hostelSize"
                 class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                placeholder="Enter number of residents"
-              />
+              >
+                <option value="small">Small (≤ 30 residents)</option>
+                <option value="medium">Medium (31-50 residents)</option>
+                <option value="large">Large (&gt; 50 residents)</option>
+              </select>
               <p class="text-sm text-text-muted mt-2">
-                Base plan includes up to 500 residents across 3 hostels
+                Choose your hostel's size category
               </p>
             </div>
 
@@ -57,7 +57,7 @@
                     Schedule meals, track attendance, manage dietary requirements
                   </div>
                   <div class="text-sm font-semibold text-primary mt-1">
-                    ₹20/resident/month
+                    ₹300/month
                   </div>
                 </div>
               </label>
@@ -75,7 +75,7 @@
                     Track payments, manage financial records
                   </div>
                   <div class="text-sm font-semibold text-primary mt-1">
-                    ₹10/resident/month
+                    ₹400/month
                   </div>
                 </div>
               </label>
@@ -93,7 +93,7 @@
                     Receive, manage, and resolve resident complaints efficiently
                   </div>
                   <div class="text-sm font-semibold text-primary mt-1">
-                    ₹5/resident/month
+                    ₹400/month
                   </div>
                 </div>
               </label>
@@ -108,13 +108,41 @@
                 <div class="flex-1">
                   <div class="font-semibold text-text">Staff Management</div>
                   <div class="text-sm text-text-muted">
-                    Manage staff accounts, roles, and permissions
+                    Manage staff accounts, roles, and permissions (up to 5 staff members)
                   </div>
                   <div class="text-sm font-semibold text-primary mt-1">
-                    ₹100/month (flat fee)
+                    ₹100/month
                   </div>
                 </div>
               </label>
+            </div>
+
+            <!-- Upcoming Features -->
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-text mb-3">Upcoming Features <span class="text-xs text-text-muted">(Coming Soon)</span></h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="feature-checkbox opacity-60 cursor-not-allowed">
+                  <div class="flex-1">
+                    <div class="font-semibold text-text">Announcements</div>
+                    <div class="text-sm text-text-muted">Send important updates to all residents</div>
+                    <div class="text-sm font-semibold text-secondary mt-1">₹100/month</div>
+                  </div>
+                </div>
+                <div class="feature-checkbox opacity-60 cursor-not-allowed">
+                  <div class="flex-1">
+                    <div class="font-semibold text-text">Notice Board</div>
+                    <div class="text-sm text-text-muted">Residents can post publicly, like a social platform</div>
+                    <div class="text-sm font-semibold text-secondary mt-1">₹100/month</div>
+                  </div>
+                </div>
+                <div class="feature-checkbox opacity-60 cursor-not-allowed">
+                  <div class="flex-1">
+                    <div class="font-semibold text-text">Finances Manager</div>
+                    <div class="text-sm text-text-muted">Expense tracker, monthly analytics, charts</div>
+                    <div class="text-sm font-semibold text-secondary mt-1">₹200/month</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -122,17 +150,20 @@
           <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
             <h2 class="text-2xl font-bold text-text mb-6">Pricing Breakdown</h2>
             
+
             <div class="space-y-4 mb-6">
               <!-- Base Plan -->
               <div class="flex justify-between items-start pb-4 border-b border-gray-300">
                 <div>
                   <div class="font-semibold text-text">Base Plan</div>
                   <div class="text-sm text-text-muted">
-                    Up to 3 hostels, 500 residents<br/>
+                    <span v-if="hostelSize === 'small'">Small Hostel (≤ 30 residents)</span>
+                    <span v-else-if="hostelSize === 'medium'">Medium Hostel (31-50 residents)</span>
+                    <span v-else>Large Hostel (&gt; 50 residents)</span><br/>
                     Basic resident management
                   </div>
                 </div>
-                <div class="text-lg font-bold text-text">₹500</div>
+                <div class="text-lg font-bold text-text">₹{{ basePrice }}</div>
               </div>
 
               <!-- Additional Features -->
@@ -140,42 +171,38 @@
                 <div class="font-semibold text-text text-sm uppercase tracking-wide">
                   Add-ons
                 </div>
-                
                 <div v-if="features.mealManagement" class="flex justify-between items-start">
                   <div>
                     <div class="font-medium text-text">Meal Management</div>
                     <div class="text-sm text-text-muted">
-                      {{ residentCount }} residents × ₹20
+                      Flat fee
                     </div>
                   </div>
-                  <div class="font-semibold text-text">₹{{ mealCost }}</div>
+                  <div class="font-semibold text-text">₹300</div>
                 </div>
-
                 <div v-if="features.feesManagement" class="flex justify-between items-start">
                   <div>
                     <div class="font-medium text-text">Fees Management</div>
                     <div class="text-sm text-text-muted">
-                      {{ residentCount }} residents × ₹10
+                      Flat fee
                     </div>
                   </div>
-                  <div class="font-semibold text-text">₹{{ feesCost }}</div>
+                  <div class="font-semibold text-text">₹400</div>
                 </div>
-
                 <div v-if="features.complaintsManagement" class="flex justify-between items-start">
                   <div>
                     <div class="font-medium text-text">Complaints Management</div>
                     <div class="text-sm text-text-muted">
-                      {{ residentCount }} residents × ₹5
+                      Flat fee
                     </div>
                   </div>
-                  <div class="font-semibold text-text">₹{{ complaintsCost }}</div>
+                  <div class="font-semibold text-text">₹400</div>
                 </div>
-
                 <div v-if="features.staffManagement" class="flex justify-between items-start">
                   <div>
                     <div class="font-medium text-text">Staff Management</div>
                     <div class="text-sm text-text-muted">
-                      Flat fee
+                      Up to 5 staff members
                     </div>
                   </div>
                   <div class="font-semibold text-text">₹100</div>
@@ -256,6 +283,7 @@
             </div>
           </div>
         </div>
+        
       </div>
     </section>
   </div>
@@ -267,7 +295,7 @@ definePageMeta({
 });
 
 // Reactive state
-const residentCount = ref(50);
+const hostelSize = ref('small');
 const features = reactive({
   mealManagement: false,
   feesManagement: false,
@@ -275,14 +303,21 @@ const features = reactive({
   staffManagement: false
 });
 
-// Computed costs
-const mealCost = computed(() => features.mealManagement ? residentCount.value * 20 : 0);
-const feesCost = computed(() => features.feesManagement ? residentCount.value * 10 : 0);
-const complaintsCost = computed(() => features.complaintsManagement ? residentCount.value * 5 : 0);
+// Base price by hostel size
+const basePrice = computed(() => {
+  if (hostelSize.value === 'small') return 500;
+  if (hostelSize.value === 'medium') return 1000;
+  return 2000;
+});
+
+// Flat feature costs
+const mealCost = computed(() => features.mealManagement ? 300 : 0);
+const feesCost = computed(() => features.feesManagement ? 400 : 0);
+const complaintsCost = computed(() => features.complaintsManagement ? 400 : 0);
 const staffCost = computed(() => features.staffManagement ? 100 : 0);
 
 const totalCost = computed(() => {
-  return 500 + mealCost.value + feesCost.value + complaintsCost.value + staffCost.value;
+  return basePrice.value + mealCost.value + feesCost.value + complaintsCost.value + staffCost.value;
 });
 
 const annualCost = computed(() => {
