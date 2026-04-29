@@ -130,13 +130,6 @@
                 </div>
                 <div class="feature-checkbox opacity-60 cursor-not-allowed">
                   <div class="flex-1">
-                    <div class="font-semibold text-text">Notice Board</div>
-                    <div class="text-sm text-text-muted">Residents can post publicly, like a social platform</div>
-                    <div class="text-sm font-semibold text-secondary mt-1">₹100/month</div>
-                  </div>
-                </div>
-                <div class="feature-checkbox opacity-60 cursor-not-allowed">
-                  <div class="flex-1">
                     <div class="font-semibold text-text">Finances Manager</div>
                     <div class="text-sm text-text-muted">Expense tracker, monthly analytics, charts</div>
                     <div class="text-sm font-semibold text-secondary mt-1">₹200/month</div>
@@ -147,7 +140,7 @@
           </div>
 
           <!-- Pricing Breakdown -->
-          <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
+          <div class="card bg-linear-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
             <h2 class="text-2xl font-bold text-text mb-6">Pricing Breakdown</h2>
             
 
@@ -294,6 +287,24 @@ definePageMeta({
   layout: "public"
 });
 
+const site = useSiteConfig();
+
+useSeoMeta({
+  title: "Pricing for hostel management software and future hostel search",
+  description:
+    "Explore pricing for Chatravasa hostel management software and the platform that will eventually support student hostel search in Varanasi.",
+  keywords:
+    "hostel management software pricing, student hostel software, hostel owner software, hostel search platform Varanasi",
+  ogTitle: "Chatravasa Pricing",
+  ogDescription:
+    "Pricing for hostel management software built for hostel owners while the student search website grows organic traffic.",
+  twitterCard: "summary_large_image",
+});
+
+useHead({
+  link: [{ rel: "canonical", href: `${site.url?.replace(/\/$/, "") ?? "https://chatravasa.com"}/pricing` }],
+});
+
 // Reactive state
 const hostelSize = ref('small');
 const features = reactive({
@@ -376,6 +387,7 @@ const hasSelectedFeatures = computed(() => {
 }
 
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 

@@ -28,10 +28,26 @@
 </template>
 
 <script lang="ts" setup>
-
-
 definePageMeta({
   layout: "public"
+});
+
+const site = useSiteConfig();
+
+useSeoMeta({
+  title: "Contact Chatravasa",
+  description:
+    "Contact Chatravasa for hostel management software, student hostel content, and future hostel search features in Varanasi.",
+  keywords:
+    "contact Chatravasa, hostel management software contact, student hostel Varanasi contact",
+  ogTitle: "Contact Chatravasa",
+  ogDescription:
+    "Get in touch about hostel management software and student hostel discovery in Varanasi.",
+  twitterCard: "summary_large_image",
+});
+
+useHead({
+  link: [{ rel: "canonical", href: `${site.url?.replace(/\/$/, "") ?? "https://chatravasa.com"}/contact` }],
 });
 
 

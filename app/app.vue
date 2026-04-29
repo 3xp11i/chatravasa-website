@@ -1,18 +1,12 @@
 
 <template>
-  <div>
-    <!-- Accessibility: announces route changes to screen readers -->
+  <NuxtLayout>
     <ClientOnly>
       <NuxtRouteAnnouncer />
     </ClientOnly>
-    
-    <!-- Pages with their layouts render here -->
-    <NuxtLayout />
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-
-
 </script>

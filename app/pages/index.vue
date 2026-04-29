@@ -1,278 +1,249 @@
 <template>
   <div class="min-h-screen bg-background">
-    <!-- Hero Section -->
-    <section class="hero-section mt-10">
-      <div class="container mx-auto px-4 py-12 md:py-16 text-center">
-        <div class="mb-6">
-          <h1 class="text-4xl md:text-6xl font-bold mb-3">
-            <span class="hindiFont text-primary">छात्रावास</span>
-            <span class="block text-text">Management System</span>
-          </h1>
-          <p class="text-lg md:text-xl text-text-muted mx-auto">
-            A modern, comprehensive solution for hostel management and resident services
-          </p>
+    <section class="hero-section mt-6 px-4">
+      <div class="container mx-auto max-w-6xl py-12 md:py-16">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div class="pt-4">
+            <p class="section-kicker mb-4">Student hostels in Varanasi</p>
+            <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-text md:text-6xl">
+              Find hostels, PGs, and safe student stays in Varanasi.
+            </h1>
+            <p class="mt-5 text-lg text-text-muted md:text-xl">
+              Chatravasa is being built for students searching for hostels in Varanasi, PGs in Varanasi, boys hostels, girls hostels, and rooms near BHU, Lanka, Sigra, Kamachha, and other college-heavy areas.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <NuxtLink
+                to="/features"
+                class="rounded-lg bg-secondary px-6 py-3 font-semibold text-white shadow-md transition-all hover:bg-secondary/90"
+              >
+                Explore app features
+              </NuxtLink>
+              <NuxtLink
+                to="/blog"
+                class="rounded-lg bg-primary px-6 py-3 font-semibold text-white shadow-md transition-all hover:bg-primary/90"
+              >
+                Read hostel guides
+              </NuxtLink>
+              <NuxtLink
+                to="/pricing"
+                class="rounded-lg border-2 border-black/10 bg-white px-6 py-3 font-semibold text-text shadow-sm transition-all hover:bg-gray-50"
+              >
+                View hostel software pricing
+              </NuxtLink>
+              <a
+                href="https://app.chatravasa.com"
+                class="rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary transition-all hover:bg-primary/5"
+                rel="noopener"
+              >
+                Open management app
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-3 text-sm text-text-muted">
+              <span class="rounded-full bg-white px-4 py-2 shadow-sm">BHU hostel search</span>
+              <span class="rounded-full bg-white px-4 py-2 shadow-sm">Lanka PGs</span>
+              <span class="rounded-full bg-white px-4 py-2 shadow-sm">Sigra hostels</span>
+              <span class="rounded-full bg-white px-4 py-2 shadow-sm">Girls hostel in Varanasi</span>
+            </div>
+          </div>
+
+          <div class="card space-y-6">
+            <div>
+              <p class="section-kicker mb-2">Why this site exists</p>
+              <h2 class="text-2xl font-bold text-text">Built for search today, search functionality tomorrow.</h2>
+            </div>
+            <p class="text-text-muted">
+              The main search experience is planned for when enough hostels are live in the app. Until then, this website can rank for student hostel searches in Varanasi through helpful pages, focused copy, and blog content.
+            </p>
+            <ul class="space-y-3 text-sm text-text-muted">
+              <li>• SEO landing pages for student hostels in Varanasi and PGs in Varanasi</li>
+              <li>• Blog posts targeting areas like BHU, Lanka, Sigra, and Kamachha</li>
+              <li>• Clear links to the management app for hostel owners</li>
+            </ul>
+          </div>
         </div>
-        
       </div>
     </section>
 
-    <!-- Features Overview -->
-    <section class="py-12 px-4">
+    <section class="px-4 py-8">
       <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-text mb-3">
-            Everything You Need in One Place
-          </h2>
-          <p class="text-text-muted">Streamline hostel operations and enhance resident experience</p>
-        </div>
-
-        <!-- Management Features -->
-        <div class="card mb-8">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 rounded-2xl flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="grey" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold text-text">For Management Staff</h3>
-              <p class="text-sm text-text-muted">Powerful tools to run your hostel efficiently</p>
-            </div>
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="feature-card">
+            <h3 class="text-lg font-semibold text-text">Student-first search intent</h3>
+            <p class="mt-2 text-sm text-text-muted">
+              The homepage is optimized around what students actually search: hostels in Varanasi, PGs in Varanasi, and budget stays near colleges.
+            </p>
           </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Hostel Management</h4>
-                  <p class="text-sm text-text-muted">Create, update, and manage multiple hostels with detailed information</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Resident Management</h4>
-                  <p class="text-sm text-text-muted">Add residents, assign rooms, and track their details and status</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Meal Planning</h4>
-                  <p class="text-sm text-text-muted">Schedule meals, track attendance, and manage dietary requirements</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Fees Management</h4>
-                  <p class="text-sm text-text-muted">Track payments, generate invoices, and manage financial records</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Complaints Tracking</h4>
-                  <p class="text-sm text-text-muted">Receive, manage, and resolve resident complaints efficiently</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Real-time Dashboard</h4>
-                  <p class="text-sm text-text-muted">Monitor occupancy, meal counts, and key metrics at a glance</p>
-                </div>
-              </div>
-            </div>
+          <div class="feature-card">
+            <h3 class="text-lg font-semibold text-text">Local area coverage</h3>
+            <p class="mt-2 text-sm text-text-muted">
+              Content can mention BHU, Lanka, Sigra, Kamachha, Banaras Hindu University, and other Varanasi student hubs.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3 class="text-lg font-semibold text-text">Owner platform preserved</h3>
+            <p class="mt-2 text-sm text-text-muted">
+              The app.chatravasa.com product stays in place for hostel owners while this site grows organic traffic.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Resident Features -->
+    <section class="px-4 py-8">
+      <div class="container mx-auto max-w-6xl">
         <div class="card">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="grey" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>
+          <p class="section-kicker mb-2">Popular search areas</p>
+          <h2 class="text-3xl font-bold text-text">Where students look for hostels in Varanasi</h2>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Hostels near BHU</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">PGs in Lanka</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Girls hostels in Sigra</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Boys hostels in Kamachha</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Student accommodation near Banaras Hindu University</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Budget PG in Varanasi</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Safe hostel for outstation students</div>
+            <div class="rounded-xl bg-background px-4 py-3 text-sm font-medium text-text">Verified hostel listings in Varanasi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-8">
+      <div class="container mx-auto max-w-6xl">
+        <div class="card">
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div>
+              <p class="section-kicker mb-2">For hostel owners</p>
+              <h2 class="text-3xl font-bold text-text">The management system still lives at app.chatravasa.com</h2>
+              <p class="mt-4 text-text-muted">
+                Hostel owners can use the management platform for residents, rooms, meals, and fees. This public site exists to capture search demand from students and guide them toward trusted hostel options.
+              </p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="feature-card">
+                <h3 class="text-lg font-semibold text-text">Resident management</h3>
+                <p class="mt-2 text-sm text-text-muted">Keep room and resident data organized inside the app.</p>
+              </div>
+              <div class="feature-card">
+                <h3 class="text-lg font-semibold text-text">Meal and fee tracking</h3>
+                <p class="mt-2 text-sm text-text-muted">Run operations cleanly while the website handles discoverability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-8">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+          <div>
+            <p class="section-kicker mb-2">Latest blog posts</p>
+            <h2 class="text-3xl font-bold text-text">Practical Varanasi hostel guides</h2>
+          </div>
+          <NuxtLink to="/blog" class="font-semibold text-primary hover:text-primary-dark">View all posts</NuxtLink>
+        </div>
+
+        <div v-if="latestPosts?.length" class="grid gap-5 md:grid-cols-3">
+          <NuxtLink
+            v-for="post in latestPosts.slice(0, 3)"
+            :key="post.path"
+            :to="post.path"
+            class="blog-card"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{{ post.tags?.[0] ?? 'Hostel guide' }}</p>
+            <h3 class="mt-3 text-xl font-bold text-text">{{ post.title }}</h3>
+            <p class="mt-3 text-sm text-text-muted">{{ post.description }}</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs text-text-muted">
+              <span v-for="tag in post.tags?.slice(0, 3)" :key="tag" class="rounded-full bg-white px-3 py-1 shadow-sm">{{ tag }}</span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-8 pb-16">
+      <div class="container mx-auto max-w-4xl">
+        <div class="card">
+          <p class="section-kicker mb-2">FAQ</p>
+          <h2 class="text-3xl font-bold text-text">Common Varanasi hostel search questions</h2>
+          <div class="mt-6 space-y-5">
+            <div>
+              <h3 class="text-lg font-semibold text-text">Is Chatravasa already a hostel search engine?</h3>
+              <p class="mt-2 text-sm text-text-muted">
+                Not yet. The search feature will launch after enough hostels are listed in the platform, but the site can still rank now with useful location pages and blog posts.
+              </p>
             </div>
             <div>
-              <h3 class="text-2xl font-semibold text-text">For Residents</h3>
-              <p class="text-sm text-text-muted">Stay connected and manage your hostel life</p>
+              <h3 class="text-lg font-semibold text-text">What keywords is this site targeting?</h3>
+              <p class="mt-2 text-sm text-text-muted">
+                Student hostels in Varanasi, hostels in Varanasi, PGs in Varanasi, boys hostel in Varanasi, girls hostel in Varanasi, hostel near BHU, hostel near Lanka, and hostel near Sigra.
+              </p>
             </div>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Meal Planner</h4>
-                  <p class="text-sm text-text-muted">Mark your meal preferences daily or weekly, skip meals when needed</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">In-Room Status</h4>
-                  <p class="text-sm text-text-muted">Update your presence status so staff knows when you're available</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Submit Complaints</h4>
-                  <p class="text-sm text-text-muted">Report issues and track the resolution status of your complaints</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Hostel Information</h4>
-                  <p class="text-sm text-text-muted">View your hostel details, room info, and important announcements</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Profile Management</h4>
-                  <p class="text-sm text-text-muted">Update your details, preferences, and profile picture</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-secondary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <div>
-                  <h4 class="font-semibold text-text mb-1">Offline Access</h4>
-                  <p class="text-sm text-text-muted">Access key features even when you're offline with PWA support</p>
-                </div>
-              </div>
+            <div>
+              <h3 class="text-lg font-semibold text-text">Where should hostel owners go?</h3>
+              <p class="mt-2 text-sm text-text-muted">
+                Hostel owners should use the management app at app.chatravasa.com for operations, while this website brings in organic search traffic from students.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer CTA -->
-    <section class="py-6 px-4 text-center">
-      <div class="container mx-auto max-w-2xl">
-        <h3 class="text-2xl md:text-3xl font-bold text-text mb-4">
-          Ready to Get Started?
-        </h3>
-        <p class="text-text-muted mb-8">
-          Join Chatravasa to experience seamless hostel management and resident services.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink 
-            to="/pricing"
-            class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-md transition-all"
-          >
-            View Pricing
-          </NuxtLink>
-          <NuxtLink 
-            to="/contact"
-            class="px-8 py-3 bg-white hover:bg-gray-50 text-text border-2 border-gray-300 font-semibold rounded-lg shadow-sm transition-all"
-          >
-            Contact Us
-          </NuxtLink>
+    <section class="px-4 py-8 border-t border-gray-100">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex items-center justify-between text-sm text-text-muted">
+          <div>© Chatravasa</div>
+          <div class="flex gap-4">
+            <NuxtLink to="/privacy" class="hover:underline">Privacy Policy</NuxtLink>
+            <NuxtLink to="/terms" class="hover:underline">Terms of Service</NuxtLink>
+          </div>
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
 <script lang="ts" setup>
+type BlogPost = {
+  path: string;
+  title: string;
+  description: string;
+  date?: string;
+  tags?: string[];
+};
+
 definePageMeta({
-  layout: "public"
+  layout: "public",
 });
 
-onMounted(async () => {
-  
+const site = useSiteConfig();
+const { data: latestPosts } = await useAsyncData<BlogPost[]>("home-latest-posts", async () => {
+  const posts = (await queryCollection("content").all()) as BlogPost[];
+  return posts
+    .filter((post) => post.path?.startsWith("/blog/"))
+    .sort((left, right) => String(right.date ?? "").localeCompare(String(left.date ?? "")));
 });
 
+const siteUrl = computed(() => site.url?.replace(/\/$/, "") ?? "https://chatravasa.com");
+
+useSeoMeta({
+  title: "Student hostels in Varanasi, PGs in Varanasi, and hostel search guides | Chatravasa",
+  description:
+    "Chatravasa helps students find hostels in Varanasi, PGs in Varanasi, boys hostels, girls hostels, and safe stays near BHU, Lanka, Sigra, and Kamachha. Student rooms, affordable accommodation, and college hostels.",
+  keywords:
+    "student hostels in Varanasi, hostels in Varanasi, PGs in Varanasi, boys hostel in Varanasi, girls hostel in Varanasi, hostel near BHU, hostel near Lanka, hostel near Sigra, hostel near Kamachha, Chatrawaas, chaatrawas, छात्रावास, हॉस्टल, हॉस्टल वाराणसी, छात्रावास वाराणसी, बॉयज हॉस्टल, गर्ल्स हॉस्टल, student accommodation Varanasi, boys PG in Varanasi, girls PG in Varanasi, student rooms Varanasi, affordable hostel Varanasi, budget accommodation Varanasi, safe hostel for students, hostel in Benares, Varanasi student housing, rooms near Banaras Hindu University, college hostel near Varanasi, बीएचयू के पास हॉस्टल, लंका में हॉस्टल, सिग्रा में हॉस्टल, आउटस्टेशन छात्र के लिए हॉस्टल",
+  ogTitle: "Student hostels in Varanasi, PGs, and college accommodation | Chatravasa",
+  ogDescription:
+    "Find student hostels, PGs, and safe accommodation in Varanasi for BHU, Lanka, Sigra, and Kamachha. Chatravasa helps students search for hostels, rooms, and budget stays.",
+  twitterCard: "summary_large_image",
+});
+
+useHead({
+  link: [{ rel: "canonical", href: `${siteUrl.value}/` }],
+});
 </script>
-
-<style scoped>
-.card {
-  background: var(--color-surface);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-@media (min-width: 768px) {
-  .card {
-    padding: 2rem;
-  }
-}
-
-.feature-card {
-  background: #F5F5F5;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.hindiFont {
-  font-family: 'Poppins', sans-serif;
-}
-</style>
